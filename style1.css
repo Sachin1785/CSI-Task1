@@ -77,6 +77,19 @@ nav ul li a:hover,
     }
 }
 
+/* Add keyframes for slide-in animation */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the header */
 header {
     display: flex;
     flex-wrap: wrap;
@@ -85,6 +98,7 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
+    animation: slideInFromLeft 1s ease-in-out;
 }
 
 header h1 {
